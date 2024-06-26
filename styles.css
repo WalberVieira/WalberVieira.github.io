@@ -43,7 +43,8 @@ table {
     width: 90%;
     max-width: 600px;
     margin: 20px auto;
-    background-color: #000000a6;
+    background-color: rgb(0 0 0 / 67%);
+    
 }
 
 th, td {
@@ -88,5 +89,5 @@ th, td {
 }
 .free-image {
     width: 10px; /* Ajuste o tamanho conforme necessário */
-    height: 10px; /* Ajuste o tamanho conforme necessário */
+    height: 10px; /* Ajuste o tamanho conforme necessário */
 }
