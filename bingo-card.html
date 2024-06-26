@@ -11,14 +11,23 @@
 <body>
     <h1>Bingo Card</h1>
     <div id="bingo-card"></div>
-
     <div id="card-id"></div>
 
     <script src="scripts.js"></script>
     <script>
-        const bingoCard = generateBingoCard();
-        displayBingoCard(bingoCard);
+        window.onload = () => {
+            const cardId = getCookie('cardId');
+            let bingoCard;
+            if (cardId) {
+                bingoCard = decodeBingoCard(cardId);
+                document.getElementById('card-id').textContent = `Card ID: ${cardId}`;
+            } else {
+                const generatedCard = generateBingoCard();
+                bingoCard = generatedCard.card;
+                document.getElementById('card-id').textContent = `Card ID: ${generatedCard.cardId}`;
+            }
+            displayBingoCard(bingoCard);
+        };
     </script>
 </body>
-
 </html>
