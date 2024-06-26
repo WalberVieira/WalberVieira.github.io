@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Bingo Card</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        label {
+            color: green;
+        }
+        #card-id-input {
+            border: 2px solid green;
+            border-radius: 5px;
+            padding: 5px;
+        }
+        button {
+            background-color: green;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: darkgreen;
+        }
+    </style>    
+</head>
+<body>
+    <h1>Check Bingo Card</h1>
+    <div>
+        <label for="card-id-input">Enter Card ID:</label>
+        <input type="text" id="card-id-input">
+        <button onclick="checkBingoCard()">Check</button>
+    </div>
+    <div id="bingo-card"></div>
+
+    <script src="scripts.js"></script>
+    <script>
+        function checkBingoCard() {
+            const cardId = document.getElementById('card-id-input').value;
+            if (!cardId) {
+                alert("Please enter a valid Card ID.");
+                return;
+            }
+
+            const decodedCard = decodeBingoCard(cardId);
+            if (decodedCard) {
+                displayBingoCard(decodedCard);
+            } else {
+                alert("Invalid Card ID.");
+            }
+        }
+    </script>
+</body>
+</html>
