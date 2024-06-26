@@ -1,7 +1,6 @@
 body {
-    background: url('img/Diversão\ backgound.jpg') no-repeat center center;
-    background-size: auto;
-    background-attachment: fixed;
+    background: url('img/diversão\ backgound2.0.jpg') no-repeat center center;
+    background-size: cover;
     background-color: black; /* Adicione uma cor de fundo para áreas onde a imagem não cobre */
     color: white;
     display: flex;
@@ -44,25 +43,24 @@ table {
     width: 90%;
     max-width: 600px;
     margin: 20px auto;
-    background-color: rgba(8, 134, 86, 0.8);
+    background-color: rgb(0 0 0 / 80%);
     
 }
 
 th, td {
-    border: 1px solid rgb(9, 172, 17);
+    border: 1px solid rgb(0 0 0);
     text-align: center;
     padding: 10px;
-    color: rgb(106, 13, 182);
+    color: rgb(255 255 255);
 }
-
 .free {
     
 }
 
 .marked {
     background-color: yellow;
+    color: #000 !important;
 }
-
 #last-numbers {
     text-align: center;
     margin-top: 20px;
